@@ -3,7 +3,7 @@ window.addEventListener('scroll', function() {
     const listToChangeColor = document.querySelector('.change-color');
     const linksToChangeColor = listToChangeColor.querySelectorAll('li a');
   
-    if (scrollPosition >= 600) {
+    if (scrollPosition >= 500) {
       listToChangeColor.classList.add('scrolled');
       linksToChangeColor.forEach(link => link.classList.add('scrolled'));
     } else {
@@ -15,6 +15,10 @@ window.addEventListener('scroll', function() {
   function toggleNavbar() {
           var navbarLinks = document.getElementById("listitem");
           navbarLinks.classList.toggle("show");
-          }
+  }
+
+  
+
+
           
   

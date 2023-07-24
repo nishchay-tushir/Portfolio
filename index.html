@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nishchay Tushir <img src="assets/n.png" alt=""></title>
+    <title>Nishchay Tushir </title>
 </head>
 
 <link rel="stylesheet" href="index.css">
 <script  src="./scripts.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="./3d.js"></script>
+<script  src="./spotify.js"></script>
+
+<script>
+    $(window).on("load", function() {
+      $(".loader-wrapper").fadeOut(5000,);
+    });
+  </script>
 
 
 
 <body>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+
+    <div id="3d-container"></div>
     
     <section class="navd">
         <img class="logo" src="assets/nwhite.png" alt="" >
@@ -28,30 +44,39 @@
 
     <section id="listitem">
         <ul>
-            <li><a href="#skills">SKILLS</li>
+            <li><a href="#skills">SKILLS</a></li>
             <li><a href="./projects.html">PROJECTS</a></li>
             <li><a href="./contact.html">CONTACT</a></li>
          </ul>
     </section>
-    
+    <div class="container">
 
 
-    <section class="primary" >
+    <section class="spot">
+            <div id="trackArtwork"></div>
+            <div class="tittle">
+                <div class="trackInfo">
+                    <div class="spotname"><p id="trackName" ></p><p id="artist"></p></div>                 
+                    </div>
+            </div>            
+    </section>
+
+    <section class="primary" id="section1">
         <h1>NISHCHAY TUSHIR---------</h1>
         <h2>Developer+3d Artist</h2>
         <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
             <source src="assets/WAVE.mp4" type="video/mp4">
             <source src="movie.webm" type="video/webm">
-                 Sorry, your browser does not support HTML5 video.
-           </video>
-
-           
+            Sorry, your browser does not support HTML5 video.
+        </video>
     </section>
 
 
-    <section id="skills">
+
+    <section id="skills"  id="section2">
         <h2>Skills</h2>
     </section>
+    </div>
     
 </body>
 </html>

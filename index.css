@@ -1,7 +1,53 @@
 *{
     margin: 0%;
     padding: 0%;
+
 }
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000004d;
+    backdrop-filter: blur(10px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
 
 .logo{
     position: fixed;
@@ -68,7 +114,58 @@
     padding: 20px;
     font-size: 1.7ch;
 }
-  
+
+.spot{
+    position: absolute;
+    
+    top: 75%; /* Adjust the top value to control the overlap amount */
+    left: 75%; /* Adjust the left value to control the overlap amount */
+    width: 20%; /* Adjust the width to control the overlap amount */
+    z-index: 1; /* A higher z-index value brings an element to the front */
+
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    margin: 1px auto 0 auto;
+    text-align: left;
+    row-gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 200px #0c0c0c;
+
+}
+
+#trackName{
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: large;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+#artist{
+    margin-top: 10px;
+    color: aliceblue;
+}
+
+
+.spot img{
+    margin: 20px;
+    display: block;
+    height: 128px;
+    border-radius: 100px;
+    animation: rotating 7s linear infinite;
+    
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
 
 
 .primary{
@@ -144,7 +241,7 @@
         .navbar-toggle img{
             position: fixed;
             height: 50px;
-            padding-left: 80%;
+            margin-left: 80%;
             margin-top: 50px;
         }
         #listitem.show{
@@ -169,9 +266,43 @@
         #listitem li a{
             text-decoration: none;
             font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(112, 114, 114, 0.301);
+            backdrop-filter: brightness(2);
+            filter: drop-shadow(1px 2px 1px #080808);
+            padding: 30px;
             color: aliceblue;
+            border-radius: 20px;
             font-size: 3ch;
             
+            
+        }
+
+        .spot{
+            position: absolute;
+            
+            top: 75%; /* Adjust the top value to control the overlap amount */
+            left: 5%; /* Adjust the left value to control the overlap amount */
+            width: 90%; /* Adjust the width to control the overlap amount */
+        
+        }
+    
+        .spot img{
+            height: 100px;
+            
+        }
+    
+        #trackName{
+            padding-top: 25px;
+            padding-left: 0px;
+            margin-left: 0px;
+            font-weight: bold;
+            font-size:medium;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #artist{
+            color: aliceblue;
+            font-size: small;
         }
         
         .primary h1{
