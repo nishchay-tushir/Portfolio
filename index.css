@@ -51,37 +51,55 @@
 
 .logo{
     position: fixed;
-    height: 128px;
-    padding-left: 30px;
-    padding-top: 20px;
+    height: 70px;
+    padding-left: 60px;
+    padding-top: 5px;
 }
 
 .github{
     position: fixed;
     height: 42px;
     margin-left: 92%;
-    margin-top: 50px;
-    background-color: rgba(244, 246, 246, 0);
+    margin-top: 20px;
+    background-color: rgba(13, 243, 243, 0);
+
 }
 .linkedin{
     position: fixed;
     height: 40px;
     padding-left: 96%;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .navbar-toggle{
     display: none;
 }
 
+.whitepart{
+    display: none;
+}
+
+
+.whitepart.scrolled{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.479);
+    backdrop-filter: blur(6px);
+    height: 5rem;
+    position: fixed;
+    width: 100%; /* Adjust the width to control the overlap amount */
+    z-index: 1; /* A higher z-index value brings an element to the front */
+
+    
+}
 .navd ul {
     position: fixed;
     list-style-type: none;
     padding: 0;
     font-size: large;
     padding-left: 110px;
-    padding-top: 70px;
+    padding-top: 30px;
     z-index: 1;
+    
 } 
 
 .navd img{
@@ -104,7 +122,7 @@
   }
   
   .change-color.scrolled li a {
-    color: rgb(254, 252, 252);
+    color: rgb(0, 0, 0);
   }
 
 .navd li a:hover {    
@@ -204,15 +222,84 @@
 }
 #skills{
     background-color: rgb(0, 0, 0);
-    height: 55rem;
+    height: 75rem;
     width: 100%;
     color: azure;
 }
+
+#skills h2{
+    text-align: center;
+    padding-top: 200px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 9ch;
+}
+
+#skills img{
+    height: 150px;
+    width: 150PX;
+    padding: 10px;
+    
+
+}
+
+h3{
+    padding-top: 70px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main{
+    display:none;
+}
+
+.main.scrolled{
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: auto auto ;    
+    width: 80%;
+    margin: 100px auto 0 auto;
+    text-align: center;
+    row-gap: 2rem;
+    animation: fadeInBottom 1s;
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+  
+
+
+.sk{
+    display: block;
+    width: 11rem;
+    background-color: #d6d5d531;
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+}
+
 
 #listitem{
     display: none;
 }
 
+@media  only screen and (min-width:768px) {
+        
+
+    .main.scrolled{
+        display: grid;
+        column-gap: 2rem;
+        grid-template-columns: auto auto auto auto auto;    
+        width: 80%;
+        margin: 100px auto 0 auto;
+        text-align: center;
+        row-gap: 2rem;
+        animation: fadeInBottom 1s;
+    }
+    
+}
 @media only screen and (max-width: 768px) {
         .navd ul{
             display: none;
@@ -242,7 +329,7 @@
             position: fixed;
             height: 50px;
             margin-left: 80%;
-            margin-top: 50px;
+            margin-top: 10px;
         }
         #listitem.show{
             display: block;
@@ -266,9 +353,6 @@
         #listitem li a{
             text-decoration: none;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: rgba(112, 114, 114, 0.301);
-            backdrop-filter: brightness(2);
-            filter: drop-shadow(1px 2px 1px #080808);
             padding: 30px;
             color: aliceblue;
             border-radius: 20px;
@@ -310,6 +394,14 @@
         }
         .primary h2{
             padding-top: 320px;
+        }
+
+        #skills{
+            height: 105rem;
+        }
+
+        .main{
+            grid-template-columns: 50px 50px 50px 50px 50px;
         }
         
 
